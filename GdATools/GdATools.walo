@@ -3,17 +3,17 @@ cd $homedir
 clear
 echo <<EOF
 
- ##########################################################
+ #################################################################
  Bienvenido a ($hostname)
  Server Running $(uptime)
  Estas en la carpeta /var/log/genesys
 
  Los siguientes accesos directos estan habilitados por GdA
- Para consultar/bajar el codigo fuente ver :
- 
+ Para consultar/bajar el codigo fuente ver:
+ github.com/victordariovera/PIC/blob/master/GdATools/GdATools.walo
  
  Comando   Uso
- ========+=============================================
+ ========+=========================================================
  vil       Abre con vi el ultimo archivo modificado
  nanol     Abre con Nano el ultimo archivo modificado
 
