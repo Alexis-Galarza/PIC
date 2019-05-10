@@ -16,6 +16,7 @@ echo " "
 echo ""
 file="PIClogs_$(date +'%Y-%m-%d_%S')--plpicpacapp66_confserv.zip"
 echo " Copiando logs de Configserver Primario.." && \
+/usr/bin/sudo /usr/local/seguridad/bin/fttget plpicpacapp66 /var/log/genesys/confserv/*$(date -d "now -1 days" +'%Y%m%d')* ./ 1>/dev/null 2>/dev/null && \
 /usr/bin/sudo /usr/local/seguridad/bin/fttget plpicpacapp66 /var/log/genesys/confserv/*$(date +'%Y%m%d')* ./ 1>/dev/null 2>/dev/null && \
 echo " Descargados $(du -sh ./ | awk '{print $1}') del servidor" && \
 echo " Comprimiendo logs..." && \
@@ -36,6 +37,7 @@ cd $HOME/logs
 file="PIClogs_$(date +'%Y-%m-%d_%S')--plpicpacapp$((10#$i + 12))_servicio_pac_cfgprx_$i.zip"
 echo "" && \
 echo " Copiando logs del servicio pac_cfgprx_$i" && \
+/usr/bin/sudo /usr/local/seguridad/bin/fttget plpicpacapp$((10#$i + 12)) /var/log/genesys/pac_cfgprx_$i/*$(date -d "now -1 days" +'%Y%m%d')* ./ 1>/dev/null 2>/dev/null && \
 /usr/bin/sudo /usr/local/seguridad/bin/fttget plpicpacapp$((10#$i + 12)) /var/log/genesys/pac_cfgprx_$i/*$(date +'%Y%m%d')* ./ 1>/dev/null 2>/dev/null && \
 echo " Descargados $(du -sh ./ | awk '{print $1}') del servidor" && \
 echo " Comprimiendo logs en archivo logs_plpicpacapp$((10#$i + 12))_pac_cfgprx_$i.tar.gz" && \
