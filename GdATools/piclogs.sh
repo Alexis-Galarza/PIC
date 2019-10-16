@@ -28,7 +28,7 @@ curl -F "file=@$HOME/$file" http://wga/logs/upload/index.php 1>/dev/null 2>/dev/
 echo " Borrando archivos temporales.." && \
 rm -rf $HOME/logs/* 1>/dev/null
 rm -rf ../$file 1>/dev/null 2>/dev/null
-echo " >> Descarga el log desde http://wga/logs/upload/data/$file"
+echo " >> Descarga el log desde http://wga/logs/data/$file"
 
 
 for i in 0{1..9} {10..18}
@@ -49,5 +49,5 @@ curl -F "file=@../$file" http://wga/logs/upload/index.php 1>/dev/null 2>/dev/nul
 echo " Borrando archivos temporales.." && \
 rm -rf $HOME/logs/* 1>/dev/null
 rm -rf $HOME/$file
-echo " >> Descarga el log desde http://wga/logs/upload/data/$file"
+echo " >> Descarga el log desde http://wga/logs/data/$file"
 done
